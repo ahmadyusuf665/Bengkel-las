@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hikmah Rezeki | Bengkel Las Cileungsi</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#0d0d0d;
+    color:white;
+}
+
+.topbar{
+    background:#f7b500;
+    color:#000;
+    text-align:center;
+    padding:10px;
+    font-weight:600;
+}
+
+nav{
+    background:#111;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 5%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    height:60px;
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.75),
+    rgba(0,0,0,.75)),
+    url('hero-banner.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero span{
+    color:#f7b500;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:20px;
+}
+
+.badges{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin:25px 0;
+}
+
+.badges span{
+    background:#222;
+    padding:10px 15px;
+    border-radius:30px;
+}
+
+.btn{
+    background:#f7b500;
+    color:#000;
+    border:none;
+    padding:15px 25px;
+    border-radius:50px;
+    font-weight:bold;
+    cursor:pointer;
+    margin:5px;
+}
+
+section{
+    padding:80px 5%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:36px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#181818;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    border:1px solid #333;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    transition:.3s;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+}
+
+.stats{
+    background:#111;
+}
+
+.stat-box{
+    text-align:center;
+}
+
+.stat-box h2{
+    color:#f7b500;
+    font-size:50px;
+}
+
+.testimonial{
+    background:#181818;
+    padding:25px;
+    border-radius:15px;
+}
+
+.map iframe{
+    width:100%;
+    height:450px;
+    border:none;
+    border-radius:15px;
+}
+
+footer{
+    background:#000;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:9999;
+}
+
+.whatsapp button{
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:15px 20px;
+    border-radius:50px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="topbar">
+🔥 Survey & Konsultasi Gratis
+</div>
+
+<nav>
+
+<div class="logo">
+<img src="logo.png">
+<h3>HIKMAH REZEKI</h3>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+BENGKEL LAS
+<br>
+<span>HIKMAH REZEKI</span>
+</h1>
+
+<p>
+Kuat • Rapi • Terpercaya
+</p>
+
+<div class="badges">
+<span>✓ Survey Gratis</span>
+<span>✓ Harga Transparan</span>
+<span>✓ Material Berkualitas</span>
+<span>✓ Tepat Waktu</span>
+</div>
+
+<button class="btn" onclick="surveyWA()">
+Minta Survey Gratis
+</button>
+
+<button class="btn" onclick="fotoWA()">
+Kirim Foto Lokasi
+</button>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<h2 class="section-title">
+Mengapa Memilih Kami?
+</h2>
+
+<div class="grid">
+
+<div class="stat-box">
+<h2>500+</h2>
+<p>Proyek Selesai</p>
+</div>
+
+<div class="stat-box">
+<h2>5+</h2>
+<p>Tahun Pengalaman</p>
+</div>
+
+<div class="stat-box">
+<h2>100%</h2>
+<p>Pelanggan Puas</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Layanan Kami
+</h2>
+
+<div class="grid">
+
+<div class="card">Kanopi</div>
+<div class="card">Pagar Besi</div>
+<div class="card">Tralis Jendela</div>
+<div class="card">Railing Tangga</div>
+<div class="card">Rolling Door</div>
+<div class="card">Folding Gate</div>
+<div class="card">Pintu Besi</div>
+<div class="card">Konstruksi Besi</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Galeri Proyek
+</h2>
+
+<div class="gallery">
+
+<img src="galeri1.jpg">
+<img src="galeri2.jpg">
+<img src="galeri3.jpg">
+<img src="galeri4.jpg">
+<img src="galeri5.jpg">
+<img src="galeri6.jpg">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Lokasi Bengkel
+</h2>
+
+<p style="text-align:center;margin-bottom:20px;">
+Jl. Empu Tunggilis, Desa Situsari,
+Cileungsi, Kabupaten Bogor 16820
+</p>
+
+<div class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=Cileungsi%20Bogor&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>HIKMAH REZEKI</h2>
+
+<p>
+Kanopi • Pagar • Tralis • Railing • Rolling Door
+</p>
+
+<br>
+
+<p>
+📞 0822-9897-7367
+</p>
+
+</footer>
+
+<div class="whatsapp">
+
+<button onclick="surveyWA()">
+💬 WhatsApp
+</button>
+
+</div>
+
+<script>
+
+function surveyWA(){
+
+let pesan =
+encodeURIComponent(
+"Halo Hikmah Rezeki, saya ingin meminta survey gratis."
+);
+
+window.location.href =
+"https://wa.me/6282298977367?text="+pesan;
+
+}
+
+function fotoWA(){
+
+let pesan =
+encodeURIComponent(
+"Halo Hikmah Rezeki, saya ingin konsultasi dan akan mengirim foto lokasi."
+);
+
+window.location.href =
+"https://wa.me/6282298977367?text="+pesan;
+
+}
+
+</script>
+
+</body>
+</html>
